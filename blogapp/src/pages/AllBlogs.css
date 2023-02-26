@@ -1,0 +1,30 @@
+.allpages{
+    padding: 2rem;
+}
+.grid-col-3 {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+.grid-item {
+    padding: 1.33rem;
+    border: 1px solid #6fffe8;
+    border-radius: 7px;
+    text-align: center;
+    min-height: 50vh;
+}
+.add-body, .add-head{
+    border: 2px solid #6fffe8;
+    padding: 0.5rem 0;
+    border-radius: 1rem;
+}
+input{
+    width: 99%;
+    font-size: large;
+    color: rgba(255, 255, 255, 100);
+    font-weight: 550;
+    background-color: transparent;
+    border: 0;
+}
