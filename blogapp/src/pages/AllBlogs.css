@@ -7,7 +7,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
 }
-
+.header-text{
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #3b506b;
+}
 .grid-item {
     padding: 1.33rem;
     border: 1px solid #6fffe8;
@@ -16,9 +21,30 @@
     min-height: 50vh;
 }
 .add-body, .add-head{
-    border: 2px solid #6fffe8;
+    border: 2px solid transparent;
     padding: 0.5rem 0;
     border-radius: 1rem;
+}
+.add-sign{
+    position: fixed;
+    left : 92vw;
+    bottom: 5vh;
+    width: 100%;
+    
+}
+.td{
+    color: white;
+    text-decoration: none;
+}
+.btn-div{
+    padding: 2rem 0;
+}
+button{
+    background-color: #3b506b;
+    color: white;
+    border: 0;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.5rem;
 }
 input{
     width: 99%;
@@ -27,4 +53,7 @@ input{
     font-weight: 550;
     background-color: transparent;
     border: 0;
+    border: 2px solid #6fffe8;
+    padding: 0.5rem 0;
+    border-radius: 1rem;
 }

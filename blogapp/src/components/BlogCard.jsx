@@ -1,11 +1,18 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function BlogCard({i}) {
   return (
-    <div >
+    <>
+      <NavLink className="td" to={`/oneblog/${i.id}`}>
+    <div className="grid-item">
+
         <h3>{i.title}</h3>
          <br/>
             {i.content}
-        </div>
+    </div>
+      </NavLink>
+    </>
+    
   )
 }
