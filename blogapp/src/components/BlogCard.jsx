@@ -9,6 +9,8 @@ export default function BlogCard({i}) {
         <h3>{i.title}</h3>
          <br/>
             {i.content}
+          <br/>
+          {i.user}
     </div>
       </NavLink>
     </>

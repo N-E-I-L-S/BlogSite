@@ -1,0 +1,10 @@
+.login-page{
+    padding-top: 20vh;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 100vh;
+}
+.username, .password{
+    padding: 1rem 0;
+}

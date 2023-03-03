@@ -25,6 +25,7 @@ router.get('/user/:user', function (req, res, next) {
 
 // add a new Blog 
 router.post('/',function(req,res,next){
+    console.log(req.body.user);
     Blogs.create(req.body).then(function(blog){
         res.send(blog);
     }).catch(next);
@@ -47,10 +48,10 @@ router.delete('/:id',function(req,res,next){
 });
 
 // delete all Blogs
-// router.delete('/',function(req,res,next){
-//     Blogs.deleteMany(req.body).then(function(blog){
-//         res.send(blog);
-//     }).catch(next);
-// });
+router.delete('/',function(req,res,next){
+    Blogs.deleteMany(req.body).then(function(blog){
+        res.send(blog);
+    }).catch(next);
+});
 
 module.exports = router

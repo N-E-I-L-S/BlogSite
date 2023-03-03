@@ -4,7 +4,7 @@ import UserAuth from '../context/UserAuth';
 export default function AddBlog() {
     const title = useRef();
     const content = useRef();
-    const { user } = UserAuth();
+    const {user } = UserAuth()
     const submithandle = () => {
         PostRequest()
     }
@@ -14,10 +14,10 @@ export default function AddBlog() {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify({
-                id: user + title.current.value,
+                id: user.email + title.current.value,
                 title: title.current.value,
                 content: content.current.value,
-                user: `${user}`
+                user: user.email
             }),
             headers: {
                 'Content-type': 'application/json'
@@ -29,7 +29,6 @@ export default function AddBlog() {
         <>
             <div className="allpages">
                 <form action="/">
-
                     <div className="add-head">
                         <h3>
                             <label htmlFor="">Heading: </label>
