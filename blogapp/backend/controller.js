@@ -10,8 +10,15 @@ router.get('/', function (req, res, next) {
 });
 
 //Get One Blog
-router.get('/:id', function (req, res, next) {
+router.get('/id/:id', function (req, res, next) {
     Blogs.findOne({id: req.params.id}).then(function(blog){
+        res.send(blog);
+    }).catch(next);
+});
+
+//Get Blog By User
+router.get('/user/:user', function (req, res, next) {
+    Blogs.find({user: req.params.user}).then(function(blog){
         res.send(blog);
     }).catch(next);
 });

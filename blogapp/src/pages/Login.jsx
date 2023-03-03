@@ -13,7 +13,6 @@ export default function Login() {
    <>
    <input type="text" ref={username}/>
    <NavLink to='/addblog'>
-
    <button onClick={()=>handleSubmit}>Submt</button>
    </NavLink>
    </>

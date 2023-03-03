@@ -8,7 +8,7 @@ export default function OneBlog() {
   const [data, setData] = useState(null)
 
   const GetOneBlog = async () => {
-  const res = await fetch(`http://localhost:3001/blogs/${blogId.id}`)
+  const res = await fetch(`http://localhost:3001/blogs/id/${blogId.id}`)
   console.log(res)
   const json = await res.json();
   console.log(json)
