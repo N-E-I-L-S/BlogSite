@@ -65,5 +65,5 @@ export default function LoginPage() {
         </>
     )
     else 
-    return <Navigate to ='/addblog'/>
+    return <Navigate to ='/'/>
 }

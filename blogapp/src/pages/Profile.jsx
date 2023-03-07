@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import BlogCard from '../components/BlogCard'
+import EditBlogCard from '../components/EditBlogCard'
 import UserAuth from '../context/UserAuth'
 
 export default function Profile() {
@@ -27,10 +27,16 @@ export default function Profile() {
         <NavLink to='/' className="signout">
           <button onClick={logout}>Signout</button>
         </NavLink>
+
         <div className="user-blogs">
+        <h3>
+          Your Blogs  
+          </h3>
         {data.map((i)=>{
-          return <BlogCard i={i}/>
-        })}
+          return <EditBlogCard i={i}/>
+        })
+        
+      }
         </div>
         <NavLink to='/'>
           <div className="td">Back to Home</div>

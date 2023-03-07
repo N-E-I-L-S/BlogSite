@@ -5,8 +5,8 @@ import reducer from './BlogFunctions'
 const BlogContext = createContext();
 export function BlogProvider({ children }) {
 
-    const initialstate={
-        loading : false,
+    const initialstate = {
+        loading: false,
         blogs: []
     }
 
@@ -22,6 +22,9 @@ export function BlogProvider({ children }) {
             dispatch({ type: "API_ERROR" })
         }
     }
+    
+
+    
 
 
     useEffect(() => {

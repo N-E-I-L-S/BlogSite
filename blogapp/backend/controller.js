@@ -31,7 +31,7 @@ router.post('/',function(req,res,next){
     }).catch(next);
 });
 
-// update a Blog 
+// update a Blog
 router.put('/:id',function(req,res,next){
     Blogs.findOneAndUpdate({id: req.params.id},req.body).then(function(blog){
         Blogs.findOne({id: req.params.id}).then(function(blog){
