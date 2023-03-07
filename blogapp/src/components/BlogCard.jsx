@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import parse from 'html-react-parser'
 
 export default function BlogCard({i}) {
   return (
@@ -8,9 +9,9 @@ export default function BlogCard({i}) {
     <div className="grid-item td">
         <h3>{i.title}</h3>
          <br/>
-            {i.content}
+            {parse(i.content)}
           <br/>
-          {i.user}
+          {parse(i.user)}
     </div>
       </NavLink>
     </>
