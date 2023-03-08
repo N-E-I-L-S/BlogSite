@@ -1,0 +1,29 @@
+.sidebar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 8%;
+    background-color: transparent;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border-right: 1px solid #6eeb83;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    text-decoration: none;
+    color: #6eeb83;
+    font-size: larger;
+}
+.logo:hover{
+    color: #6eeb83;
+    text-decoration: none;
+}
+.sidebar li{
+    padding: 2rem 0;
+}
+.sidebar li:last-child{
+    margin-top: 50vh;
+}

@@ -70,15 +70,15 @@ export default function Signup() {
                                 <input placeholder='Reset Password' type="password" id="c-pwd" ref={con_created_pwd} required={true} />
                             </div>
                             <div className="login-submit-btn">
-                                <button type='submit' className='btn'>SignUp</button>
+                                <button type='submit' className='btn blogcardbtn my-4'>SignUp</button>
                             </div>
+                            <div style={{ marginLeft: "25vw" }}>
+                    <Link to='/login' className='td'>Already have an account?</Link>
+                </div>
                         </div>
                     </form>
                 </div>
-                <div style={{ marginLeft: "25vw" }}>
-
-                    <Link to='/login' className='td'>Already have an account?</Link>
-                </div>
+                
 
             </>
         )

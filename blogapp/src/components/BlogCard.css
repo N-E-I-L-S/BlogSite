@@ -1,0 +1,34 @@
+.blogcard-div{
+    height: 40vh;
+    overflow: hidden;
+}
+.editblogcard-div{
+    height: fit-content;
+    /* overflow: hidden; */
+}
+.blogcard{
+    padding: 2rem;
+}
+.editblogcard{
+    padding: 2rem 0;
+}
+.bloghead{
+    color: #6EEB83;
+}
+.blogcard .username{
+    opacity: 0.5;
+}
+.blogcardbtn{
+    background-color: transparent;
+    border: 1px solid #6EEB83;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+}
+.blogcardbtn:hover{
+    background-color: #6EEB83;
+    color: #272727;
+}
+.editbtn{
+    display: flex;
+    justify-content: center;
+}

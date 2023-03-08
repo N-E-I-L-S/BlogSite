@@ -1,0 +1,11 @@
+.oneblog-page{
+    margin-left: 10%;
+    padding:5rem 10rem;
+}
+.head{
+    margin-bottom: 10vh;
+}
+.head p{
+    font-weight: 50;
+    opacity: 0.33;
+}

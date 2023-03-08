@@ -26,11 +26,19 @@ export default function MyEditor() {
     function print() {
         const blocksbody = convertToRaw(editorStatebody.getCurrentContent()).blocks;
         const valuebody = blocksbody.map(blockbody => (!blockbody.text.trim() && '\n') || blockbody.text).join('\n');
-        if (valuebody.length < 2) {
-            setBodyWarn("Body Cannot be empty")
-        }
-        else if(heading.current.value.length <2 ){
-            setHeadWarn("Heading Cannot be empty")
+        if(valuebody.length <2 || heading.current.value.length <2)
+        {
+
+            if (valuebody.length < 2) {
+                setBodyWarn("Body Cannot be empty")
+            }
+            else 
+            setBodyWarn(null)
+            if(heading.current.value.length <2 ){
+                setHeadWarn("Title Cannot be empty")
+            }
+            else
+            setHeadWarn(null)
         }
         else
             getHTML()
@@ -67,13 +75,15 @@ export default function MyEditor() {
     return (
         <>
             <div className="addblog-page">
+                <div className="addblog-title">
 
-                <h3>Add Heading For Your Blog Below</h3>
-                <input type="text" ref={heading} />
+                <h3>Title</h3>
+                <input type="text" placeholder="Enter Your Title Here" ref={heading} />
                 <p>{headwarn}</p>
-                <h3>Add Your Blog Below</h3>
+                </div>
+                <h3>Your Blog</h3>
                 <div
-                    style={{ border: "1px solid black", minHeight: "2rem", cursor: "text", marginTop: '2rem' }}
+                    style={{ border: "1px solid black", minHeight: "2rem", cursor: "text", marginTop: '1rem' }}
                 >
                     <Editor
                         editorState={editorStatebody}

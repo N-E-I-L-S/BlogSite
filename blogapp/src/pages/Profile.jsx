@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import EditBlogCard from '../components/EditBlogCard'
 import UserAuth from '../context/UserAuth'
+import './Profile.css'
 
 export default function Profile() {
 
@@ -23,13 +24,16 @@ export default function Profile() {
   if (data) {
     return (
       <>
-        <p>{user.email}</p>
-        <NavLink to='/' className="signout">
-          <button onClick={logout}>Signout</button>
-        </NavLink>
+      <div className="profile-page">
+        <div className="profile-nav">
 
-        <div className="user-blogs">
-        <h3>
+        <p className='profile-user'>Your Account: {user.email}</p>
+        <NavLink to='/' className="signout">
+          <button className='blogcardbtn td' onClick={logout}>Signout</button>
+        </NavLink>
+        </div>
+        <div className="profile-blogs">
+        <h3 className='profile-heading'>
           Your Blogs  
           </h3>
         {data.map((i)=>{
@@ -38,9 +42,7 @@ export default function Profile() {
         
       }
         </div>
-        <NavLink to='/'>
-          <div className="td">Back to Home</div>
-        </NavLink>
+      </div>
       </>
     )
   

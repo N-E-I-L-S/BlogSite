@@ -1,0 +1,21 @@
+.profile-page{
+    margin-left: 10%;
+    padding: 2rem;
+}
+.profile-user{
+    color: #6eeb83;
+}
+.signout{
+    padding: 0;
+    width: 10%;
+}
+.profile-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #6eeb83;
+}
+.profile-heading{
+    padding: 2rem 0;
+    margin-bottom: 5vh;
+}

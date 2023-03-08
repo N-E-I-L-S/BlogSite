@@ -26,9 +26,19 @@ a, .rdw-editor-toolbar, .rdw-inline-wrapper, .rdw-list-wrapper, .rdw-text-align-
     padding-left: 30%;
 }
 .addblog-page{
+    margin-left: 10%;
     padding: 2rem;
 }
+.addblog-title{
+    padding: 1rem 0;
+}
 .addblog-btn{
+    background-color: transparent;
+    border: 1px solid #6eeb83;
     margin-top: 2rem;
     border-radius: 0.25rem;
+}
+.addblog-btn:hover{
+    background-color: #6eeb83;
+    color: #272727;
 }

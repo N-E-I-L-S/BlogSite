@@ -10,12 +10,7 @@ export default function AllBlogs() {
 
   return (
     <div className="allpages">
-      <div className="header-text">
-        <h1>
-          All Blogs
-        </h1>
-      </div>
-      <div className="grid-col-3">
+      <div className="allblogs-blogs">
         {
           blogs.map((i) => {
             return <div key={i.id}>
@@ -24,13 +19,6 @@ export default function AllBlogs() {
           })
         }
       </div>
-        <div className="add-sign">
-          <NavLink to='/addblog'>
-           <p className='td'>
-             Add
-            </p>
-          </NavLink>
-        </div>
     </div>
   )
 }

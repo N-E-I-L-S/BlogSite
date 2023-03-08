@@ -54,9 +54,9 @@ export default function LoginPage() {
                         </div>
                         
                         <div className="btns">
-                            <button type='submit' className='login-submit-btn'>Login</button>
+                            <button type='submit' className='blogcardbtn'>Login</button>
                         </div>
-                        <div className='login-options my-3'>
+                        <div className='login-options my-3' style={{ marginLeft: "25vw" }}>
                         <NavLink className="td" to='/signup'>Don't have an account?  </NavLink> <br/>
             </div>
                     </div>

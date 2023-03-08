@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import BlogCard from '../components/BlogCard'
 import useBlog from '../context/BlogContext'
+import './OneBlog.css'
+import parse from 'html-react-parser'
 
 export default function OneBlog() {
   const blogId = useParams()
@@ -24,10 +26,22 @@ export default function OneBlog() {
   {
     return (
       <>
-    <BlogCard i={data}/>
-    <NavLink to='/'>
-    <div className="td">Back to Home</div>
-    </NavLink>
+      <div className="oneblog-page">
+      <div className="oneblog-div td">
+          <div className="head">
+
+            <h3 className='bloghead'>{data.title}</h3>
+            <p className='username'>
+              written by: &nbsp; 
+              {parse(data.user)}
+
+            </p>
+          </div>
+            <p>
+              {parse(data.content)}
+            </p>
+        </div>
+      </div>
     </>
   )
 }
